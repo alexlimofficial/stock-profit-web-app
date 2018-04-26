@@ -1,0 +1,57 @@
+<!-- Frontend HTML template for Stock Profit Calculator -->
+<!-- Author: Alex Lim -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
+            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title>Stock Profit Calculator</title>
+  </head>
+
+  <body>
+    <!-- Body of HTML file. Gets input from user for each individual field. -->
+
+    <h1>Stock Profit Calculator</h1>
+    <!-- Form Object [ action="/submit" when form is submitted - POST request ] -->
+    <form method="POST" action="/submit">
+        <div class="form-group">
+
+            <!-- User Inputs -->
+
+            <!-- Ticker Symbol -->
+            <label for="ticker">Ticker Symbol:</label>
+            <input type="text" id="ticker" name="ticker" placeholder="(e.g. AMD, AAPL, AMZN)" required><br>
+
+            <!-- Allotment (number of shares) -->
+            <label for="allotment">Allotment (number of shares):</label>
+            <input type="text" id="allotment" name="allotment" required><br>
+
+            <!-- Final Share Price (in dollars) -->
+            <label for="final_price">Final Share Price (in dollars):</label>
+            <input type="text" id="final_price" name="final_price" required><br>
+
+            <!-- Sell Commission (in dollars) -->
+            <label for="sell_commission">Sell Commission (in dollars):</label>
+            <input type="text" id="sell_commission" name="sell_commission" required><br>
+
+            <!-- Initial Share Price (in dollars) -->
+            <label for="initial_share_price">Initial Share Price (in dollars):</label>
+            <input type="text" id="initial_share_price" name="initial_share_price" required><br>
+
+            <!-- Buy Commission (in dollars) -->
+            <label for="buy_commission">Buy Commission (in dollars):</label>
+            <input type="text" id="buy_commission" name="buy_commission" required><br>
+
+            <!-- Capital Gain Tax Rate (%) -->
+            <label for="capital_gain_tax">Capital Gain Tax Rate (%):</label>
+            <input type="text" id="capital_gain_tax" name="capital_gain_tax" required><br>
+        </div>
+
+      <!-- Bootstrap Submit Button -->
+      <input class="btn btn-info" type="Submit" value="Submit">
+    </form>
+  </body>

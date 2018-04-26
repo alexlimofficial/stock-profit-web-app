@@ -1,0 +1,45 @@
+<!-- HTML template for Stock Profit Report -->
+<!-- Author: Alex Lim -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
+            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>STOCK PROFIT CALCULATOR REPORT</h1>
+
+    <!-- Print Out User Input Stock Data -->
+    <h3>Your Inputs: </h3>
+    <p><strong>Ticker Symbol:</strong> {{ ticker }}</p>
+    <p><strong>Allotment (number of shares):</strong> {{ allotment }}</p>
+    <p><strong>Final Share Price (in dollars):</strong> ${{ final_share_price }}</p>
+    <p><strong>Sell Commission (in dollars):</strong> ${{ sell_commission }}</p>
+    <p><strong>Initial Share Price (in dollars):</strong> ${{ initial_share_price }}</p>
+    <p><strong>Buy Commission (in dollars):</strong> ${{ buy_commission }}</p>
+    <p><strong>Capital Gain Tax Rate (%):</strong> {{ capital_gain_tax }}%</p>
+
+    <!-- Horizontal Line -->
+    <hr>
+
+    <!-- Print Out Profit Report -->
+    <h3>Profit Report:</h3>
+    <p><strong>Proceeds:</strong> ${{ proceeds }}</p>
+    <p><strong>Cost:</strong> ${{ cost }}</p>
+    <p><strong>Cost Details:</strong><br>
+       Total Purchase Price <br>
+       {{ allotment }} x %{{ initial_share_price}} = ${{ initial_purchase_cost }} <br>
+       Buy Commission = ${{ buy_commission }} <br>
+       Sell Commission = ${{ sell_commission }} <br>
+       Tax on Capital Gain = {{ capital_gain_tax }}% of ${{ profits }} = ${{ tax_on_capital_gain }}
+    </p>
+    <p><strong>Net Profit:</strong> ${{ net_profit }}</p>
+    <p><strong>Return on Investment:</strong>{{ return_on_investment }}%</p>
+    <p><strong>To break even, you should have a final share price of:</strong> ${{ break_even_price }}</p>
+</body>
+</html>
